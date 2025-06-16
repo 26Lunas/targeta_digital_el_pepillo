@@ -108,6 +108,18 @@
         .social-icons {
             margin-top: 10px;
         }
+
+        .btn-color-pagar {
+            background: #225c01;
+            font-weight: bold;
+            color: white;
+        }
+
+        .btn-color-pagar:hover {
+            background: none;
+            border: solid 1.5px #225c01;
+            color: rgb(2, 20, 0);
+        }
     </style>
 </head>
 
@@ -144,7 +156,7 @@
             </div>
             <!-- Botón y slider de pago -->
             <div>
-                <button class="btn btn-danger mt-2" onclick="moverSlider()" id="btnPagar">Pagar</button>
+                <button class="btn btn-color-pagar mt-2" onclick="moverSlider()" id="btnPagar">Pagar</button>
 
                 <div id="pagoSlider" class="carousel slide mt-3" data-bs-interval="false">
                     <div class="carousel-inner">
@@ -152,7 +164,7 @@
                         <div class="carousel-item active" id="slide-contacto">
                             <div class="my-3 contact-icons">
                                 <a href="tel:3152854277"><i class="bi bi-telephone-fill" title="Llamar"></i></a>
-                                <a href="https://api.whatsapp.com/send/?phone=%2B57+573152854277&text&type=phone_number&app_absent=0"
+                                <a href="https://api.whatsapp.com/send/?phone=%2B573152854277&text&type=phone_number&app_absent=0"
                                     target="_blank"><i class="bi bi-whatsapp" title="WhatsApp"></i></a>
                             </div>
                             <div class="address">
@@ -163,9 +175,12 @@
 
                         <!-- Slide 2: QR -->
                         <div class="carousel-item text-center">
-                            <img src="img/img-pagar-nequi.jpg" alt="QR para pagar"
-                                style="width: 200px; height: auto; margin-bottom: 10px;">
-                            <div style="font-weight: bold; color: #d35400;">Paga tu delicia:</div>
+                            <a
+                                href="https://api.whatsapp.com/send?phone=+573152854277&text=Hola,%20quiero%20hacer%20un%20pago">
+                                <img src="img/img-pagar-nequi.jpg" alt="QR para pagar"
+                                    style="width: 200px; height: auto; margin-bottom: 10px;">
+                            </a>
+                            <div style="font-weight: bold; color: #d35400;">Click en el QR y realiza tu pago</div>
                         </div>
                     </div>
                 </div>
