@@ -108,6 +108,14 @@
         .social-icons {
             margin-top: 10px;
         }
+        .btn-color-pagar{
+            background: #83e949;
+            font-weight: bold;
+        }
+        .btn-color-pagar:hover{
+            background: none;
+            border: solid 1.5px #83e949;
+        }
     </style>
 </head>
 
@@ -144,7 +152,7 @@
             </div>
             <!-- Botón y slider de pago -->
             <div>
-                <button class="btn btn-danger mt-2" onclick="moverSlider()" id="btnPagar">Pagar</button>
+                <button class="btn btn-color-pagar mt-2" onclick="moverSlider()" id="btnPagar">Pagar</button>
 
                 <div id="pagoSlider" class="carousel slide mt-3" data-bs-interval="false">
                     <div class="carousel-inner">
