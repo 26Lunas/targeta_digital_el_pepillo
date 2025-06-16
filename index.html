@@ -175,12 +175,28 @@
 
                         <!-- Slide 2: QR -->
                         <div class="carousel-item text-center">
-                            <a
-                                href="https://api.whatsapp.com/send?phone=+573152854277&text=Hola,%20quiero%20hacer%20un%20pago">
-                                <img src="img/img-pagar-nequi.jpg" alt="QR para pagar"
-                                    style="width: 200px; height: auto; margin-bottom: 10px;">
-                            </a>
-                            <div style="font-weight: bold; color: #d35400;">Click en el QR y realiza tu pago</div>
+                            <img src="img/img-pagar-nequi.jpg" alt="QR para pagar"
+                                style="width: 200px; height: auto; margin-bottom: 10px; cursor: pointer;"
+                                onclick="abrirNequi()" />
+
+                            <div style="font-weight: bold; color: #d35400;">Paga tu delicia escaneando o tocando el QR</div>
+
+                            <script>
+                                const numeroNequi = '3152854277';
+
+                                function abrirNequi() {
+                                    // Esta URL intenta abrir la app Nequi directamente desde el celular
+                                    window.location.href = `nequi://send-money?phone=${numeroNequi}`;
+
+                                    // Si falla (por ejemplo, en PC), muestra una alerta o redirige a WhatsApp como backup
+                                    setTimeout(() => {
+                                        if (!navigator.userAgent.includes("Mobile")) {
+                                            alert("Este enlace solo funciona en celular con la app Nequi instalada.");
+                                        }
+                                    }, 1000);
+                                }
+                            </script>
+
                         </div>
                     </div>
                 </div>
